@@ -25,6 +25,8 @@ jobs:
         run: |
           cd wasm
           wasm-pack build --target no-modules
+          cp ../examples/*.step deploy/  
+          touch deploy/.nojekyll  
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.5
