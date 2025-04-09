@@ -1,5 +1,24 @@
 [
-    ["Abstract PCA", "examples/abstract_pca.step", "https://github.com/Formlabs/foxtrot/blob/master/examples/abstract_pca.step", "X"],
-    ["Cube with a hole", "examples/cube_hole.step", "https://github.com/Formlabs/foxtrot/blob/master/examples/cube_hole.step", "Y"],
-    ["Cuboid", "examples/cuboid.step", "https://github.com/Formlabs/foxtrot/blob/master/examples/cuboid.step"]
+    [
+        "Abstract PCA",
+        "examples/abstract_pca.step",
+        "https://github.com/Formlabs/foxtrot/blob/master/examples/abstract_pca.step",
+        "X"
+    ],
+    [
+        "Cube with a hole",
+        "examples/cube_hole.step",
+        "https://github.com/Formlabs/foxtrot/blob/master/examples/cube_hole.step",
+        "Y"
+    ],
+    [
+        "Cuboid",
+        "examples/cuboid.step",
+        "https://github.com/Formlabs/foxtrot/blob/master/examples/cuboid.step"
+    ],
+    [
+        "Robot Arm",
+        "examples/robot_arm.step",
+        "https://github.com/gracegerwe/step_visualizer/blob/master/docs/examples/robot_arm.step"
+    ]
 ]
