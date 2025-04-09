@@ -7,4 +7,3 @@ step/src/*.exe
 Cargo.lock
 .vscode
 wasm/target
-wasm/pkg
