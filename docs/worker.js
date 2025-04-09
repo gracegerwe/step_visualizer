@@ -2,10 +2,10 @@ importScripts("wasm.js");
 
 const { step_to_triangle_buf, init_log } = wasm_bindgen;
 async function run() {
-    await wasm_bindgen();
+    await wasm_bindgen("worker_bg.wasm");
     init_log();
 
-    onmessage = function(e) {
+    onmessage = function (e) {
         var triangles = step_to_triangle_buf(e.data);
         postMessage(triangles);
     }
