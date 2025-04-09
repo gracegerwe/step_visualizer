@@ -25,13 +25,20 @@ jobs:
         run: |
           cd wasm
           wasm-pack build --target no-modules
-          rm -f deploy/.js deploy/.wasm  
-          cp pkg/*.js deploy/
-          cp pkg/*.wasm deploy/
+          # Remove the entire deploy/ directory to start fresh
+          rm -rf deploy/
+          mkdir deploy/
+          # Copy static assets (HTML, CSS, JS) from the original deploy/
+          cp -v deploy-template/* deploy/
+          # Copy actual WASM and JS files from pkg/, avoiding symlinks
+          cp -v pkg/*.js deploy/
+          cp -v pkg/*.wasm deploy/
+          # Copy the entire examples directory
           cp -r ../examples deploy/
+          # Add .nojekyll
           touch deploy/.nojekyll
-          ls -la deploy/  
-          ls -la deploy/examples/ 
+          ls -la deploy/  # Debug: Confirm files and directories
+          ls -la deploy/examples/  # Debug: Confirm examples contents
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.5
